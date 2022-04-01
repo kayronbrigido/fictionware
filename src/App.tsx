@@ -1,26 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import InfoCard from './Components/InfoCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <body>
+        <Navbar />
+        <InfoCard data={dataInfo}/>
+      </body>
     </div>
   );
 }
 
 export default App;
+
+const dataInfo = [
+  {
+  image: "texto01",
+  imageDescription: "texto01",
+  description: ["texto","texto","texto","texto"]
+},
+{
+  image: "texto02",
+  imageDescription: "texto02",
+  description: ["texto","texto","texto","texto"]
+},
+{
+  image: "texto03",
+  imageDescription: "texto03",
+  description: ["texto","texto","texto","texto"]
+},
+]
