@@ -1,5 +1,7 @@
 import { InfoCardType } from "../../models/interfaces";
-import "./InfoCardStyles.css"
+import "./InfoCardStyles.tsx"
+import { H2, Text } from "./InfoCardStyles"
+
 const InfoCard = (props: any) => {
   const informations: InfoCardType[] = props.data
   return (
@@ -8,6 +10,8 @@ const InfoCard = (props: any) => {
         return (
           <div className="infoCard">
             <p>{image}</p>
+            <H2>HEADER</H2>
+            <Text>{imageDescription}</Text>
             <p>{imageDescription}</p>
           </div>
         )
