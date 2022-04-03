@@ -1,7 +1,7 @@
 import { useReduxState } from "@src/hooks/useReduxState"
 import { setTheme } from "@src/store/redux-store/actions/themeActions"
-import React from "react"
 import { useDispatch } from "react-redux"
+import { translate } from "@src/services/i18n"
 
 const Navbar = () => {
 
@@ -15,9 +15,8 @@ const Navbar = () => {
     return(
         <>
         <ul>
-            <li>Item 01</li>
-            <li>Item 02</li>
-            <li>Item 03</li>
+            <li>{translate("NAVBAR.HOME1123132")}</li>
+            <li>{translate("NAVBAR.HOME")}</li>
             <li>Item 04</li>
         </ul>
         <button onClick={() => { handleTheme() }}>Mudar o thema</button>
